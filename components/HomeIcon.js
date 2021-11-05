@@ -4,8 +4,8 @@ const HomeIcon = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="23.236"
-      height="24.686"
+      width="100%"
+      height="100%"
       viewBox="0 0 23.236 24.686"
     >
       <g
@@ -19,7 +19,7 @@ const HomeIcon = (props) => {
           d="M-80.836-31.742h-5.223a1.451,1.451,0,0,1-1.451-1.451v-5.223a1.16,1.16,0,0,0-1.161-1.161h-2.321a1.16,1.16,0,0,0-1.161,1.161v5.223A1.451,1.451,0,0,1-93.6-31.742h-5.223a1.451,1.451,0,0,1-1.451-1.451V-44.268a4.354,4.354,0,0,1,1.659-3.42l8.247-6.5a.872.872,0,0,1,1.078,0l8.248,6.5a4.352,4.352,0,0,1,1.658,3.418v11.077A1.451,1.451,0,0,1-80.836-31.742Z"
           transform="translate(0 0)"
           fill="#fff"
-          stroke={props.color}
+          stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
