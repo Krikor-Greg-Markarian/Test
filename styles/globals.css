@@ -2,3 +2,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Winston-Medium";
+  src: url("/fonts/Winston/Winston\ Medium.otf");
+  font-style: normal;
+  font-weight: medium;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Winston-Bold";
+  src: url("/fonts/Winston/Winston\ Bold.otf");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
