@@ -22,6 +22,7 @@ import BlueDeleteIcon from "../components/icons/BlueDeleteIcon";
 import ShareIcon from "../components/icons/ShareIcon";
 import SaveIcon from "../components/icons/SaveIcon";
 import NotInterestedIcon from "../components/icons/NotInterestedIcon";
+import RedHeksagonIcon from "../components/icons/RedHeksagonIcon";
 
 export default function Home(props) {
   return (
@@ -410,6 +411,52 @@ export default function Home(props) {
             >
               PLAY AGAIN
             </button>
+          </div>
+        </div>
+      </section>
+      <section className={cn("mt-10")}>
+        <div className={cn("relative")}>
+          <RedHeksagonIcon />
+          <div className={cn("absolute bottom-0 left-1 text-center")}>
+            <p className={cn("text-white text-sm")}>w</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <div className={cn("flex ")}>
+          <div className={cn("flex-shrink")}>
+            <img
+              className={cn("w-38 h-28 rounded-lg")}
+              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
+              alt=""
+            />
+          </div>
+          <div className={cn("flex-shrink ml-3")}>
+            <HorizontalCigarette />
+          </div>
+          <div className={cn("flex-shrink ml-1")}>
+            <p
+              className={cn("font-bold text-3xl")}
+              style={{ fontFamily: "Winston-Medium" }}
+            >
+              NAME OF<div>USER</div>
+            </p>
+
+            <div className={cn("flex")}>
+              <div className={cn("flex-shrink mt-1 mr-1")}>
+                <div className={cn("relative")}>
+                  <RedHeksagonIcon />
+                  <div className={cn("absolute bottom-0 left-1 text-center")}>
+                    <p className={cn("text-white text-sm")}>w</p>
+                  </div>
+                </div>
+              </div>
+              <div className={cn("flex-shrink")}>
+                <p>5071</p>
+                <p>ID#8197391798</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
