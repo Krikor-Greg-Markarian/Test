@@ -27,7 +27,7 @@ import RightArrowIconRed from "../components/icons/RightArrowIconRed";
 
 export default function Home(props) {
   return (
-    <div className={cn("container mx-auto")}>
+    <div>
       <section>
         <WinsIcon
           icon={<HomeIcon />}
@@ -97,7 +97,7 @@ export default function Home(props) {
                   <a href="">Academy</a>
                 </Link>
               </li>
-              <div className={cn("flex")}>
+              <div className={cn("flex pt-4")}>
                 <div className={cn("flex-shrink")}>
                   <FacebookIcon />
                 </div>
@@ -136,7 +136,7 @@ export default function Home(props) {
                   <a href="">Game Name</a>
                 </Link>
               </li>
-              <div className={cn("flex")}>
+              <div className={cn("flex pt-4")}>
                 <div className={cn("flex-shrink")}>
                   <FacebookIcon />
                 </div>
