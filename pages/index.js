@@ -27,7 +27,7 @@ import RightArrowIconRed from "../components/icons/RightArrowIconRed";
 
 export default function Home(props) {
   return (
-    <div>
+    <div className={cn("container mx-auto")}>
       <section>
         <WinsIcon
           icon={<HomeIcon />}
@@ -62,95 +62,97 @@ export default function Home(props) {
       </section>
 
       <section className={cn("mt-20")}>
-        <WinstonLogo />
-        <p
-          className={cn("font-bold w-3/12 mt-4 mb-6 uppercase")}
-          style={{ fontFamily: "Winston-Medium" }}
-        >
-          My rewards Winston Products Terms &amp; privacy
-        </p>
-        <div
-          className={cn(
-            "grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
-          )}
-        >
-          <div className={cn("col-span-1 mt-6")}>
-            <p
-              className={cn("font-bold")}
-              style={{ fontFamily: "Winston-Medium" }}
-            >
-              MUSIC
-            </p>
-            <li className={cn("text-gray-500 list-none")}>
-              <Link href="">
-                <a href="">Radio</a>
-              </Link>
-            </li>
-            <li className={cn("text-gray-500 list-none")}>
-              <Link href="">
-                <a href="">Events</a>
-              </Link>
-            </li>
-            <li className={cn("text-gray-500 list-none")}>
-              <Link href="">
-                <a href="">Academy</a>
-              </Link>
-            </li>
-            <div className={cn("flex")}>
-              <div className={cn("flex-shrink")}>
-                <FacebookIcon />
+        <div className={cn("w-4/12")}>
+          <WinstonLogo />
+          <p
+            className={cn("font-bold w-3/12 mt-4 mb-6 uppercase")}
+            style={{ fontFamily: "Winston-Medium" }}
+          >
+            My rewards Winston Products Terms &amp; privacy
+          </p>
+          <div
+            className={cn(
+              "grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2"
+            )}
+          >
+            <div className={cn("col-span-1 mt-6")}>
+              <p
+                className={cn("font-bold")}
+                style={{ fontFamily: "Winston-Medium" }}
+              >
+                MUSIC
+              </p>
+              <li className={cn("text-gray-500 list-none")}>
+                <Link href="">
+                  <a href="">Radio</a>
+                </Link>
+              </li>
+              <li className={cn("text-gray-500 list-none")}>
+                <Link href="">
+                  <a href="">Events</a>
+                </Link>
+              </li>
+              <li className={cn("text-gray-500 list-none")}>
+                <Link href="">
+                  <a href="">Academy</a>
+                </Link>
+              </li>
+              <div className={cn("flex")}>
+                <div className={cn("flex-shrink")}>
+                  <FacebookIcon />
+                </div>
+                <div className={cn("flex-shrink mt-1 ml-2")}>
+                  <YoutubeIcon />
+                </div>
+                <div className={cn("flex-shrink")}></div>
               </div>
-              <div className={cn("flex-shrink mt-1 ml-2")}>
-                <YoutubeIcon />
-              </div>
-              <div className={cn("flex-shrink")}></div>
+              <p
+                className={cn("text-blue-900 font-bold mt-12")}
+                style={{ fontFamily: "Winston-Medium" }}
+              >
+                CONTACT US
+              </p>
+              <CigaretteIcon />
             </div>
-            <p
-              className={cn("text-blue-900 font-bold mt-12")}
-              style={{ fontFamily: "Winston-Medium" }}
-            >
-              CONTACT US
-            </p>
-            <CigaretteIcon />
-          </div>
-          <div className={cn("col-span-1 mt-6")}>
-            <p
-              className={cn("font-bold")}
-              style={{ fontFamily: "Winston-Medium" }}
-            >
-              GAMES
-            </p>
-            <li className={cn("text-gray-500 list-none")}>
-              <Link href="">
-                <a href="">Game Name</a>
-              </Link>
-            </li>
-            <li className={cn("text-gray-500 list-none")}>
-              <Link href="">
-                <a href="">Long Game Name</a>
-              </Link>
-            </li>
-            <li className={cn("text-gray-500 list-none")}>
-              <Link href="">
-                <a href="">Game Name</a>
-              </Link>
-            </li>
-            <div className={cn("flex")}>
-              <div className={cn("flex-shrink")}>
-                <FacebookIcon />
+            <div className={cn("col-span-1 mt-6")}>
+              <p
+                className={cn("font-bold")}
+                style={{ fontFamily: "Winston-Medium" }}
+              >
+                GAMES
+              </p>
+              <li className={cn("text-gray-500 list-none")}>
+                <Link href="">
+                  <a href="">Game Name</a>
+                </Link>
+              </li>
+              <li className={cn("text-gray-500 list-none")}>
+                <Link href="">
+                  <a href="">Long Game Name</a>
+                </Link>
+              </li>
+              <li className={cn("text-gray-500 list-none")}>
+                <Link href="">
+                  <a href="">Game Name</a>
+                </Link>
+              </li>
+              <div className={cn("flex")}>
+                <div className={cn("flex-shrink")}>
+                  <FacebookIcon />
+                </div>
+                <div className={cn("flex-shrink mt-1 ml-2")}>
+                  <YoutubeIcon />
+                </div>
+                <div className={cn("flex-shrink")}></div>
               </div>
-              <div className={cn("flex-shrink mt-1 ml-2")}>
-                <YoutubeIcon />
-              </div>
-              <div className={cn("flex-shrink")}></div>
+              <p
+                className={cn("text-blue-900 font-bold mt-12 p-0")}
+                style={{ fontFamily: "Winston-Medium" }}
+              >
+                ABOUT US
+              </p>
+              <CigaretteIcon />
             </div>
-            <p
-              className={cn("text-blue-900 font-bold mt-12 p-0")}
-              style={{ fontFamily: "Winston-Medium" }}
-            >
-              ABOUT US
-            </p>
-            <CigaretteIcon />
           </div>
         </div>
       </section>
