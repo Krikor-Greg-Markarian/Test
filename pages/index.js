@@ -14,6 +14,10 @@ import HorizontalCigarette from "../components/icons/HorizontalCigarette";
 import PenIcon from "../components/icons/PenIcon";
 import DeleteIcon from "../components/icons/DeleteIcon";
 import HeksagonIcon from "../components/icons/HeksagonIcon";
+import HerksagonIconWhite from "../components/icons/HerksagonIconWhite";
+import XIcon from "../components/icons/XIcon";
+import RightArrowIcon from "../components/icons/RightArrowIcon";
+import ThreeDotsIcon from "../components/icons/ThreeDotsIcon";
 
 export default function Home(props) {
   return (
@@ -159,29 +163,29 @@ export default function Home(props) {
             </p>
           </div>
         </div>
+      </section>
 
+      <section className={cn("mt-10")}>
         <div className={cn("flex border-2")}>
-          <div className={cn("flex-shrink flex border-2")}>
+          <div className={cn("flex-shrink-0")}>
             <img
-              className={cn("rounded-lg w-20 h-20")}
+              className={cn("w-20 h-20 rounded-lg")}
               src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
               alt=""
             />
           </div>
-          <div className={cn("flex-shrink mt-4 border-2")}>
-            <p
-              className={cn("font-bold ")}
-              style={{ fontFamily: "Winston-Medium" }}
-            >
-              TECH
-            </p>
+          <div className={cn("flex-shrink ml-3")}>
+            <p className={cn(" font-bold w-auto")}>TECH </p>
 
-            <p>10 Songs</p>
+            <p className={cn("font-bold text-sm text-gray-600")}>10 Songs</p>
+          </div>
+          <div className={cn("flex justify-end items-center ")}>
+            <ThreeDotsIcon />
           </div>
         </div>
       </section>
 
-      <section>
+      <section className={cn("mt-10")}>
         <div className={cn("bg-black w-40 h-20 rounded-lg")}>
           <div className={cn("flex ml-3")}>
             <div className={cn("flex-shrink mt-3")}>
@@ -278,7 +282,84 @@ export default function Home(props) {
         <p>1.2k Views / 2 Weeks ago</p>
       </section>
 
-      <section></section>
+      <section className={cn("mt-10")}>
+        <div
+          className={cn("relative")}
+          style={{ backgroundImage: `url(${props.imageUrl})` }}
+        >
+          <img
+            className={cn("w-60 h-60 rounded-lg")}
+            src="https://cdn.pixabay.com/photo/2021/11/06/17/21/bird-6773865__340.jpg"
+            alt=""
+          />
+          <div className={cn("absolute top-3 left-3")}>
+            <HerksagonIconWhite />
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <div className={cn("bg-blue-900 rounded-lg w-2/12 p-4")}>
+          <div className={cn("float-right")}>
+            <XIcon />
+          </div>
+          <p
+            style={{ fontFamily: "Winston-Bold" }}
+            className={cn("text-white font-bold")}
+          >
+            EXPAND DOUBLE APPLE
+          </p>
+          <p className={cn("text-gray-500")}>The Double Apple One</p>
+          <p className={cn("text-gray-400 pt-2 pb-2 text-sm")}>
+            A one-of-a-kind capsule cigarette, the Summer Mix offers smokers
+            Winston’s original smooth experience, mixed with the unique Double
+            Apple taste just one click away.
+          </p>
+          <li className={cn("text-white list-none")}>
+            <div className={cn("relative")}>
+              <a href="">READ MORE</a>
+              <div className={cn("absolute top-0 left-24")}>
+                <RightArrowIcon />
+              </div>
+            </div>
+          </li>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <div className={cn("flex")}>
+          <div className={cn("flex-shrink-0")}>
+            <img
+              className={cn("w-20 h-20 rounded-lg")}
+              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
+              alt=""
+            />
+          </div>
+          <div className={cn("flex-shrink ml-3 ")}>
+            <p className={cn(" font-bold w-auto")}>NAME OF GAME ON TWO LINES</p>
+            <div className={cn("float-right")}>
+              <div className={cn("relative")}>
+                <HeksagonIcon />
+                <div className={cn("absolute top-1 ")}>
+                  <p className={cn("text-white text-xs")}>+50 </p>
+                </div>
+              </div>
+            </div>
+            <p className={cn("font-bold text-sm text-gray-600")}>
+              Type of game
+            </p>
+          </div>
+          <div className={cn("flex-shrink mt-7 ml-3 ")}>
+            <button
+              className={cn(
+                "bg-red-600 px-1 py-1 rounded-lg text-center text-white text-sm"
+              )}
+            >
+              PLAY AGAIN
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
