@@ -23,6 +23,7 @@ import ShareIcon from "../components/icons/ShareIcon";
 import SaveIcon from "../components/icons/SaveIcon";
 import NotInterestedIcon from "../components/icons/NotInterestedIcon";
 import RedHeksagonIcon from "../components/icons/RedHeksagonIcon";
+import RightArrowIconRed from "../components/icons/RightArrowIconRed";
 
 export default function Home(props) {
   return (
@@ -427,15 +428,15 @@ export default function Home(props) {
         <div className={cn("flex ")}>
           <div className={cn("flex-shrink")}>
             <img
-              className={cn("w-38 h-28 rounded-lg")}
+              className={cn("w-38 h-32 rounded-lg")}
               src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
               alt=""
             />
           </div>
-          <div className={cn("flex-shrink ml-3")}>
+          <div className={cn("flex-shrink ml-3 mt-3")}>
             <HorizontalCigarette />
           </div>
-          <div className={cn("flex-shrink ml-1")}>
+          <div className={cn("flex-shrink ml-1 mt-3")}>
             <p
               className={cn("font-bold text-3xl")}
               style={{ fontFamily: "Winston-Medium" }}
@@ -477,6 +478,63 @@ export default function Home(props) {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <li className={cn("text-red-600 list-none font-bold text-sm")}>
+          <div className={cn("relative")}>
+            <a href="">VIEW ALL</a>
+            <div className={cn("absolute top-0 left-16")}>
+              <RightArrowIconRed />
+            </div>
+          </div>
+        </li>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <div className={cn("flex flex-row ")}>
+          <div className={cn("bg-white shadow-xl px-12 py-5")}>
+            <div className={cn("flex flex-row")}>
+              <div className={cn("mt-1")}>
+                <WinsIcon
+                  icon={<HomeIcon />}
+                  color="text-red-500"
+                  title="HOME"
+                  width={5}
+                  height={5}
+                />
+              </div>
+
+              <div className={cn("ml-12 mt-2")}>
+                <WinsIcon
+                  icon={<EntertainmentIcon />}
+                  color="text-red"
+                  title="ENTERTAINMENT"
+                  width={6}
+                  height={6}
+                />
+              </div>
+              <div className={cn("ml-24 mt-1.5")}>
+                <WinsIcon
+                  icon={<GameIcon />}
+                  color="text-red"
+                  title="GAME"
+                  width={6}
+                  height={6}
+                />
+              </div>
+              <div className={cn("ml-12 mt-1")}>
+                <WinsIcon
+                  icon={<AccountIcon />}
+                  color="text-red"
+                  title="PROFILE"
+                  width={5}
+                  height={5}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
