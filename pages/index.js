@@ -18,6 +18,10 @@ import HerksagonIconWhite from "../components/icons/HerksagonIconWhite";
 import XIcon from "../components/icons/XIcon";
 import RightArrowIcon from "../components/icons/RightArrowIcon";
 import ThreeDotsIcon from "../components/icons/ThreeDotsIcon";
+import BlueDeleteIcon from "../components/icons/BlueDeleteIcon";
+import ShareIcon from "../components/icons/ShareIcon";
+import SaveIcon from "../components/icons/SaveIcon";
+import NotInterestedIcon from "../components/icons/NotInterestedIcon";
 
 export default function Home(props) {
   return (
@@ -165,8 +169,8 @@ export default function Home(props) {
         </div>
       </section>
 
-      <section className={cn("mt-10")}>
-        <div className={cn("flex border-2")}>
+      <section className={cn("mt-10 w-2/12")}>
+        <div className={cn("flex ")}>
           <div className={cn("flex-shrink-0")}>
             <img
               className={cn("w-20 h-20 rounded-lg")}
@@ -174,10 +178,30 @@ export default function Home(props) {
               alt=""
             />
           </div>
-          <div className={cn("flex-shrink ml-3")}>
+          <div className={cn("flex-grow ml-3 mt-4")}>
+            <p className={cn(" font-bold w-auto")}>NAME OF FRIEND </p>
+
+            <p className={cn("text-sm text-gray-400")}>ID NUMBER</p>
+          </div>
+          <div className={cn("flex justify-end items-center ")}>
+            <BlueDeleteIcon />
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10 w-2/12")}>
+        <div className={cn("flex ")}>
+          <div className={cn("flex-shrink-0")}>
+            <img
+              className={cn("w-20 h-20 rounded-lg")}
+              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
+              alt=""
+            />
+          </div>
+          <div className={cn("flex-grow ml-3 mt-4")}>
             <p className={cn(" font-bold w-auto")}>TECH </p>
 
-            <p className={cn("font-bold text-sm text-gray-600")}>10 Songs</p>
+            <p className={cn("text-sm text-gray-400")}>10 Songs</p>
           </div>
           <div className={cn("flex justify-end items-center ")}>
             <ThreeDotsIcon />
@@ -201,6 +225,35 @@ export default function Home(props) {
             </div>
             <div className={cn("flex-shrink ml-3")}>
               <p className={cn("text-white mt-3")}>Delete</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <div className={cn("bg-black w-40 h-32 rounded-lg")}>
+          <div className={cn("flex ml-3 ")}>
+            <div className={cn("flex-shrink mt-6")}>
+              <ShareIcon />
+            </div>
+            <div className={cn("flex-shrink ml-3 mt-2")}>
+              <p className={cn("text-white mt-2")}>Share</p>
+            </div>
+          </div>
+          <div className={cn("flex ml-3")}>
+            <div className={cn("flex-shrink mt-3")}>
+              <SaveIcon />
+            </div>
+            <div className={cn("flex-shrink ml-3")}>
+              <p className={cn("text-white mt-2")}>Save</p>
+            </div>
+          </div>
+          <div className={cn("flex ml-3")}>
+            <div className={cn("flex-shrink mt-3")}>
+              <NotInterestedIcon />
+            </div>
+            <div className={cn("flex-shrink ml-3")}>
+              <p className={cn("text-white mt-2")}>Not interested</p>
             </div>
           </div>
         </div>
