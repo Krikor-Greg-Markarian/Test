@@ -460,6 +460,26 @@ export default function Home(props) {
           </div>
         </div>
       </section>
+
+      <section className={cn("mt-10")}>
+        <div className={cn("flex")}>
+          <div className={cn("flex-shrink")}>
+            <HorizontalCigarette />
+          </div>
+          <div className={cn("flex-shrink mt-1")}>
+            <p
+              className={cn("font-bold text-3xl")}
+              style={{ fontFamily: "Winston-Medium" }}
+            >
+              SONGS TO LET<div>OFF STEAM</div>
+            </p>
+            <p className={cn("w-4/12 text-gray-500")}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
