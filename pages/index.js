@@ -349,6 +349,7 @@ export default function Home(props) {
             src="https://cdn.pixabay.com/photo/2021/11/06/17/21/bird-6773865__340.jpg"
             alt=""
           />
+
           <div className={cn("absolute top-3 left-3")}>
             <HerksagonIconWhite />
           </div>
