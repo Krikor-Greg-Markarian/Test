@@ -24,12 +24,12 @@ import SaveIcon from "../components/icons/SaveIcon";
 import NotInterestedIcon from "../components/icons/NotInterestedIcon";
 import RedHeksagonIcon from "../components/icons/RedHeksagonIcon";
 import RightArrowIconRed from "../components/icons/RightArrowIconRed";
-import Carton from "../components/icons/Carton";
+import WhiteHeksagonIcon from "../components/icons/WhiteHeksagonIcon";
 
 export default function Home(props) {
   return (
     <div>
-      <section>
+      {/* <section>
         <WinsIcon
           icon={<HomeIcon />}
           color="text-red-500"
@@ -60,7 +60,7 @@ export default function Home(props) {
           width={8}
           height={8}
         />
-      </section>
+      </section> */}
 
       <section className={cn("mt-20")}>
         <div className={cn("w-4/12")}>
@@ -440,6 +440,24 @@ export default function Home(props) {
       </section>
 
       <section className={cn("mt-10")}>
+        <div>
+          <div className={cn("relative")}>
+            <WhiteHeksagonIcon />
+            <div className={cn("absolute top-2 left-1.5")}>
+              <p className={cn("text-red-500 font-bold text-xs")}>+50</p>
+              <p
+                className={cn(
+                  "text-red-500 font-bold text-xs absolute left-2 -bottom-2"
+                )}
+              >
+                W
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
         <div className={cn("flex ")}>
           <div className={cn("flex-shrink")}>
             <img
@@ -551,6 +569,16 @@ export default function Home(props) {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <div className={cn("bg-black w-3/12 p-6")}>
+          <p className={cn("text-white pb-2")}>Choose language</p>
+          <button className={cn(" bg-white w-3/12 rounded")}>English</button>
+          <button className={cn("bg-white w-3/12 rounded ml-2")}>
+            العربيّة
+          </button>
         </div>
       </section>
     </div>
