@@ -24,6 +24,7 @@ import SaveIcon from "../components/icons/SaveIcon";
 import NotInterestedIcon from "../components/icons/NotInterestedIcon";
 import RedHeksagonIcon from "../components/icons/RedHeksagonIcon";
 import RightArrowIconRed from "../components/icons/RightArrowIconRed";
+import Carton from "../components/icons/Carton";
 
 export default function Home(props) {
   return (
@@ -423,6 +424,17 @@ export default function Home(props) {
           <RedHeksagonIcon />
           <div className={cn("absolute bottom-0 left-1 text-center")}>
             <p className={cn("text-white text-sm")}>w</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("mt-10")}>
+        <div>
+          <div className={cn("relative")}>
+            <HeksagonIcon />
+            <div className={cn("absolute top-1")}>
+              <p className={cn("text-white text-xs")}>+50</p>
+            </div>
           </div>
         </div>
       </section>
