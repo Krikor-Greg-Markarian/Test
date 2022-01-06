@@ -36,6 +36,8 @@ import CardShadow from "../mirsadComponents/CardShadow";
 import CardShadowRec from "../mirsadComponents/CardShadowRec";
 import BoxWithButton from "../mirsadComponents/BoxWithButton";
 import BoxWithShadow from "../mirsadComponents/BoxWithShadow";
+import SvgrAttach from "../mirsadComponents/SvgrAttach";
+import SvgrCircleNumb from "../mirsadComponents/SvgrCircleNumb";
 
 export default function Home(props) {
   return (
@@ -809,7 +811,206 @@ export default function Home(props) {
         </div>
       </section>
 
-     
+      <section>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("text-center text-2xl")}>verify your</div>
+          <div className={cn("text-green-300 text-center text-xl font-bold")}>
+            phone number
+          </div>
+
+          <div className={cn("relative")}>
+            <div
+              className={cn("bg-gray-50 container p-4 rounded-lg pt-20 pb-20")}
+            >
+              <div className={cn("pb-3.5")}>
+                <p className={cn("text-sm text-center text-gray-500")}>
+                  Verify your number with the code sent
+                </p>
+                <div className={cn("flex justify-center items-center pt-6")}>
+                  <div className={cn("flex-shrink-0 ")}>
+                    <div
+                      className={cn(
+                        " flex justify-center shadow-2xl items-center w-12 h-12 rounded-lg bg-white"
+                      )}
+                    >
+                      5
+                    </div>
+                  </div>
+                  <div className={cn("flex-shrink-0 ml-4")}>
+                    <div
+                      className={cn(
+                        " flex justify-center items-center w-12 h-12 rounded-lg shadow-2xl bg-white"
+                      )}
+                    ></div>
+                  </div>
+                  <div className={cn("flex-shrink-0 ml-4")}>
+                    <div
+                      className={cn(
+                        " flex justify-center items-center w-12 h-12 rounded-lg shadow-2xl bg-white"
+                      )}
+                    ></div>
+                  </div>
+                  <div className={cn("flex-shrink-0 ml-4")}>
+                    <div
+                      className={cn(
+                        " flex justify-center items-center w-12 h-12 rounded-lg shadow-2xl bg-white"
+                      )}
+                    ></div>
+                  </div>
+                </div>
+                <p className={cn("text-sm text-center text-gray-500 pt-6")}>
+                  i did not receive a code
+                </p>
+                <p
+                  className={cn(
+                    "underline text-center text-black cursor-pointer "
+                  )}
+                >
+                  resend
+                </p>
+              </div>
+            </div>
+            <div className={cn("flex justify-center items-center")}>
+              <div className={cn("absolute -bottom-4")}>
+                <Button />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("text-center")}>you're getting</div>
+          <div className={cn("text-green-300 text-center text-xl font-bold")}>
+            there
+          </div>
+
+          <div className={cn("relative")}>
+            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
+              <p className={cn("font-bold text-center")}>
+                one step closer to become a mirsad agent
+              </p>
+              <p className={cn("text-center text-sm text-gray-400")}>
+                All you have to do is book an appointment with us and help the
+                Mirsad community grow faster.
+              </p>
+            </div>
+            <div className={cn("flex justify-center items-center")}>
+              {" "}
+              <div className={cn("absolute -bottom-4")}>
+                <Button />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className={cn(
+            "underline flex justify-center items-center pt-6 cursor-pointer"
+          )}
+        >
+          skip
+        </div>
+      </section>
+
+      <section>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("text-center text-2xl")}>we're glad to have </div>
+          <div className={cn("text-green-300 text-center text-xl font-bold")}>
+            you <span className={cn("text-black font-normal")}>here</span>
+          </div>
+          <div className={cn("flex justify-center items-center pt-8 pb-8")}>
+            <SvgrCircleNumb />
+          </div>
+          <div className={cn("relative")}>
+            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
+              <div className={cn("pb-3.5")}>
+                <p className={cn("text-sm text-center font-bold")}>
+                  please fill in the registration form to become a mirsad agent
+                </p>
+              </div>
+              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
+                <input
+                  placeholder='full name'
+                  className={cn(
+                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
+                  )}
+                  type='text'
+                  name=''
+                  id=''
+                />
+              </div>
+              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
+                <input
+                  placeholder='email'
+                  className={cn(
+                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
+                  )}
+                  type='text'
+                  name=''
+                  id=''
+                />
+              </div>
+
+              <form action=''>
+                <select
+                  className={cn(
+                    "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
+                  )}
+                  name=''
+                  id=''
+                >
+                  <option value=''>choose the location of the quiz</option>
+                </select>
+              </form>
+              <form className={cn("pt-2 pb-2")} action=''>
+                <select
+                  className={cn(
+                    "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
+                  )}
+                  name=''
+                  id=''
+                >
+                  <option value=''>choose the category</option>
+                </select>
+              </form>
+              <div className={cn("flex mt-2")}>
+                <div className={cn("flex-shrink-0 mt-1")}>
+                  <SvgrAttach />
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <p>attach an image of yourself</p>
+                </div>
+              </div>
+              <div className={cn("flex mt-2")}>
+                <div className={cn("flex-shrink-0 mt-1")}>
+                  <SvgrAttach />
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <p>attach criminal record paper</p>
+                </div>
+              </div>
+              <div className={cn("flex mt-2")}>
+                <div className={cn("flex-shrink-0 mt-1")}>
+                  <SvgrAttach />
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <p>attach good conduct and behavior</p>
+                </div>
+              </div>
+            </div>
+            <div className={cn("flex justify-center items-center")}>
+              <div className={cn("absolute -bottom-4")}>
+                <Button />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <SvgrCircleNumb />
+      </section>
     </div>
   );
 }
