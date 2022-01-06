@@ -38,6 +38,9 @@ import BoxWithButton from "../mirsadComponents/BoxWithButton";
 import BoxWithShadow from "../mirsadComponents/BoxWithShadow";
 import SvgrAttach from "../mirsadComponents/SvgrAttach";
 import SvgrCircleNumb from "../mirsadComponents/SvgrCircleNumb";
+import SvgrCircleNumb2 from "../mirsadComponents/SvgrCircleNumb";
+import SvgrMailBox from "../svgrMirsad/SvgrMailBox";
+import SvgrGettingthere from "../svgrMirsad/SvgrGettingthere";
 
 export default function Home(props) {
   return (
@@ -897,9 +900,11 @@ export default function Home(props) {
               </p>
             </div>
             <div className={cn("flex justify-center items-center")}>
-              {" "}
               <div className={cn("absolute -bottom-4")}>
                 <Button />
+              </div>
+              <div className='absolute top-0'>
+                <SvgrGettingthere />
               </div>
             </div>
           </div>
@@ -913,7 +918,7 @@ export default function Home(props) {
         </div>
       </section>
 
-      <section>
+      <section className={cn("pt-12 pb-12")}>
         <div className={cn("bg-gray-100")}>
           <div className={cn("text-center text-2xl")}>we're glad to have </div>
           <div className={cn("text-green-300 text-center text-xl font-bold")}>
@@ -1008,8 +1013,270 @@ export default function Home(props) {
         </div>
       </section>
 
+      <section className={cn("pt-12 pb-12")}>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("text-center text-2xl")}>we're glad to have </div>
+          <div className={cn("text-green-300 text-center text-xl font-bold")}>
+            you <span className={cn("text-black font-normal")}>here</span>
+          </div>
+          <div className={cn("flex justify-center items-center pt-8 pb-8")}>
+            <SvgrCircleNumb2 />
+          </div>
+          <div className={cn("relative")}>
+            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
+              <div className={cn("pb-3.5")}>
+                <p className={cn("text-sm text-center font-bold")}>
+                  additional information, for a more customized experience
+                </p>
+              </div>
+
+              <form action=''>
+                <select
+                  className={cn(
+                    "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
+                  )}
+                  name=''
+                  id=''
+                >
+                  <option value=''>
+                    choose the region you prefer to cover
+                  </option>
+                </select>
+              </form>
+              <p className={cn("pt-4  pb-4")}>
+                choose between the available dates
+              </p>
+              <div className={cn("flex mt-2")}>
+                <div className={cn("flex-shrink-0 ")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    12 dec
+                  </div>
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    25 jan
+                  </div>
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    3 feb
+                  </div>
+                </div>
+              </div>
+              <div className={cn("flex mt-2")}>
+                <div className={cn("flex-shrink-0 ")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    14 mar
+                  </div>
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    25 apr
+                  </div>
+                </div>
+              </div>
+              <p className={cn("pt-4  pb-4")}>
+                choose between the available timings
+              </p>
+              <div className={cn("flex mt-2")}>
+                <div className={cn("flex-shrink-0 ")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    1 pm
+                  </div>
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    3 pm
+                  </div>
+                </div>
+                <div className={cn("flex-shrink-0 ml-2")}>
+                  <div
+                    className={cn(
+                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
+                    )}
+                  >
+                    5 pm
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={cn("flex justify-center items-center")}>
+              <div className={cn("absolute -bottom-4")}>
+                <Button />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={cn("pt-12 pb-12")}>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("pb-24")}>
+            <div className={cn("text-center text-2xl")}>
+              turn on your mailbox
+            </div>
+            <div className={cn("text-green-300 text-center text-xl font-bold")}>
+              notifications
+            </div>
+          </div>
+          <div className={cn("relative")}>
+            <div className={cn("bg-white p-4 rounded-lg pt-40 pb-40")}>
+              <div className={cn("pb-3.5")}>
+                <p className={cn("text-sm text-center font-bold pt-8")}>
+                  check your mailbox
+                </p>
+                <p className={cn("text-xs p-4 text-gray-400")}>
+                  You will receive a QR code by email, which should be shown to
+                  our Mirsad team at the chosen location of your quiz.
+                </p>
+              </div>
+            </div>
+            <div className={cn("flex justify-center items-center")}>
+              <div className={cn("absolute -bottom-4")}>
+                <Button />
+              </div>
+            </div>
+            <div className={cn("flex justify-center items-center")}>
+              <div className={cn("absolute -top-12 ")}>
+                <SvgrMailBox />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='pt-12 pb-12'>
+        <div className={cn("bg-white rounded-lg p-6")}>
+          <p className={cn("pb-3")}>report type</p>
+          <form className={cn("pb-2")} action=''>
+            <select
+              className={cn(
+                "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
+              )}
+              name=''
+              id=''
+            >
+              <option value=''>what type of infringement is it ?</option>
+            </select>
+          </form>
+          <form action=''>
+            <select
+              className={cn(
+                "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
+              )}
+              name=''
+              id=''
+            >
+              <option value=''>choose between the</option>
+            </select>
+          </form>
+        </div>
+      </section>
+
+      <section className='pt-12 pb-12'>
+        <div className={cn("bg-white rounded-lg p-6")}>
+          <p className={cn("pb-3")}>description</p>
+          <div className={cn("border-2 border-gray-200 rounded-xl")}>
+            <textarea
+              className={cn("p-3")}
+              placeholder='write your description about mirsad resport here'
+              name=''
+              id=''
+              cols='40'
+              rows='10'
+            ></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section className='pt-12 pb-12'>
+        <p className={cn("text-center underline cursor-pointer")}>
+          save to drafts
+        </p>
+      </section>
+
+      <section className='pt-12 pb-12'>
+        <form action=''>
+          <select
+            className={cn(
+              "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
+            )}
+            name=''
+            id=''
+          >
+            <option value=''>choose between the</option>
+          </select>
+        </form>
+      </section>
+
       <section>
-        <SvgrCircleNumb />
+        <form className={cn("pt-1")} action=''>
+          <select
+            className={cn(
+              "w-full rounded-xl p-2 bg-white border-2 text-black border-gray-100"
+            )}
+            name=''
+            id=''
+          >
+            <option value=''>traffic violation</option>
+          </select>
+        </form>
+      </section>
+
+      <section className='pt-12 pb-12'>
+        <div className={cn("bg-white rounded-lg p-6")}>
+          <p className={cn("pb-3")}>report type</p>
+          <form className={cn("pb-2")} action=''>
+            <select
+              className={cn(
+                "w-full rounded-xl p-2 bg-white border-2 text-black border-gray-100"
+              )}
+              name=''
+              id=''
+            >
+              <option value=''>traffic violation</option>
+            </select>
+          </form>
+          <form action=''>
+            <select
+              className={cn(
+                "w-full rounded-xl p-2 bg-white border-2 text-black border-gray-100"
+              )}
+              name=''
+              id=''
+            >
+              <option value=''>seatbelt</option>
+            </select>
+          </form>
+        </div>
       </section>
     </div>
   );
