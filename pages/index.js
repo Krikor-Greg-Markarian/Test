@@ -25,6 +25,17 @@ import NotInterestedIcon from "../components/icons/NotInterestedIcon";
 import RedHeksagonIcon from "../components/icons/RedHeksagonIcon";
 import RightArrowIconRed from "../components/icons/RightArrowIconRed";
 import WhiteHeksagonIcon from "../components/icons/WhiteHeksagonIcon";
+import SvgrMirsadLogo from "../svgrMirsad/SvgrMirsadLogo";
+import ShadowBox from "../mirsadComponents/ShadovBox";
+import SvgrQuestionMark from "../svgrMirsad/SvgrQuestionMark";
+import SvgrCamera from "../svgrMirsad/SvgrCamera";
+import SvgrFile from "../svgrMirsad/SvgrFile";
+import SvgrSubmit from "../svgrMirsad/SvgrSubmit";
+import Button from "../mirsadComponents/Button";
+import CardShadow from "../mirsadComponents/CardShadow";
+import CardShadowRec from "../mirsadComponents/CardShadowRec";
+import BoxWithButton from "../mirsadComponents/BoxWithButton";
+import BoxWithShadow from "../mirsadComponents/BoxWithShadow";
 
 export default function Home(props) {
   return (
@@ -84,18 +95,18 @@ export default function Home(props) {
                 MUSIC
               </p>
               <li className={cn("text-gray-500 list-none")}>
-                <Link href="">
-                  <a href="">Radio</a>
+                <Link href=''>
+                  <a href=''>Radio</a>
                 </Link>
               </li>
               <li className={cn("text-gray-500 list-none")}>
-                <Link href="">
-                  <a href="">Events</a>
+                <Link href=''>
+                  <a href=''>Events</a>
                 </Link>
               </li>
               <li className={cn("text-gray-500 list-none")}>
-                <Link href="">
-                  <a href="">Academy</a>
+                <Link href=''>
+                  <a href=''>Academy</a>
                 </Link>
               </li>
               <div className={cn("flex pt-4")}>
@@ -123,18 +134,18 @@ export default function Home(props) {
                 GAMES
               </p>
               <li className={cn("text-gray-500 list-none")}>
-                <Link href="">
-                  <a href="">Game Name</a>
+                <Link href=''>
+                  <a href=''>Game Name</a>
                 </Link>
               </li>
               <li className={cn("text-gray-500 list-none")}>
-                <Link href="">
-                  <a href="">Long Game Name</a>
+                <Link href=''>
+                  <a href=''>Long Game Name</a>
                 </Link>
               </li>
               <li className={cn("text-gray-500 list-none")}>
-                <Link href="">
-                  <a href="">Game Name</a>
+                <Link href=''>
+                  <a href=''>Game Name</a>
                 </Link>
               </li>
               <div className={cn("flex pt-4")}>
@@ -179,8 +190,8 @@ export default function Home(props) {
           <div className={cn("flex-shrink-0")}>
             <img
               className={cn("w-20 h-20 rounded-lg")}
-              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg'
+              alt=''
             />
           </div>
           <div className={cn("flex-grow ml-3 mt-4")}>
@@ -199,8 +210,8 @@ export default function Home(props) {
           <div className={cn("flex-shrink-0")}>
             <img
               className={cn("w-20 h-20 rounded-lg")}
-              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg'
+              alt=''
             />
           </div>
           <div className={cn("flex-grow ml-3 mt-4")}>
@@ -269,8 +280,8 @@ export default function Home(props) {
           <div className={cn(" flex-shrink-0")}>
             <img
               className={cn("w-40 h-40 rounded-lg")}
-              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg'
+              alt=''
             />
           </div>
           <div className={cn("flex-shrink ml-4")}>
@@ -294,8 +305,8 @@ export default function Home(props) {
           <div className={cn("flex-shrink-0")}>
             <img
               className={cn("w-20 h-20 rounded-lg")}
-              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg'
+              alt=''
             />
           </div>
           <div className={cn("flex-shrink ml-3")}>
@@ -325,8 +336,8 @@ export default function Home(props) {
       <section className={cn("mt-10")}>
         <img
           className={cn("w-40 h-40 rounded-lg")}
-          src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
-          alt=""
+          src='https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg'
+          alt=''
         />
 
         <p className={cn("text-gray-500 mt-2")}>Name of artist...</p>
@@ -347,8 +358,8 @@ export default function Home(props) {
         >
           <img
             className={cn("w-60 h-60 rounded-lg")}
-            src="https://cdn.pixabay.com/photo/2021/11/06/17/21/bird-6773865__340.jpg"
-            alt=""
+            src='https://cdn.pixabay.com/photo/2021/11/06/17/21/bird-6773865__340.jpg'
+            alt=''
           />
 
           <div className={cn("absolute top-3 left-3")}>
@@ -376,7 +387,7 @@ export default function Home(props) {
           </p>
           <li className={cn("text-white list-none")}>
             <div className={cn("relative")}>
-              <a href="">READ MORE</a>
+              <a href=''>READ MORE</a>
               <div className={cn("absolute top-0 left-24")}>
                 <RightArrowIcon />
               </div>
@@ -390,8 +401,8 @@ export default function Home(props) {
           <div className={cn("flex-shrink-0")}>
             <img
               className={cn("w-20 h-20 rounded-lg")}
-              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg'
+              alt=''
             />
           </div>
           <div className={cn("flex-shrink ml-3 ")}>
@@ -462,8 +473,8 @@ export default function Home(props) {
           <div className={cn("flex-shrink")}>
             <img
               className={cn("w-38 h-32 rounded-lg")}
-              src="https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg"
-              alt=""
+              src='https://cdn.pixabay.com/photo/2019/10/23/06/30/hamburg-4570577__340.jpg'
+              alt=''
             />
           </div>
           <div className={cn("flex-shrink ml-3 mt-3")}>
@@ -518,7 +529,7 @@ export default function Home(props) {
       <section className={cn("mt-10")}>
         <li className={cn("text-red-600 list-none font-bold text-sm")}>
           <div className={cn("relative")}>
-            <a href="">VIEW ALL</a>
+            <a href=''>VIEW ALL</a>
             <div className={cn("absolute top-0 left-16")}>
               <RightArrowIconRed />
             </div>
@@ -533,8 +544,8 @@ export default function Home(props) {
               <div className={cn("mt-1")}>
                 <WinsIcon
                   icon={<HomeIcon />}
-                  color="text-red-500"
-                  title="HOME"
+                  color='text-red-500'
+                  title='HOME'
                   width={5}
                   height={5}
                 />
@@ -543,8 +554,8 @@ export default function Home(props) {
               <div className={cn("ml-12 mt-2")}>
                 <WinsIcon
                   icon={<EntertainmentIcon />}
-                  color="text-red"
-                  title="ENTERTAINMENT"
+                  color='text-red'
+                  title='ENTERTAINMENT'
                   width={6}
                   height={6}
                 />
@@ -552,8 +563,8 @@ export default function Home(props) {
               <div className={cn("ml-24 mt-1.5")}>
                 <WinsIcon
                   icon={<GameIcon />}
-                  color="text-red"
-                  title="GAME"
+                  color='text-red'
+                  title='GAME'
                   width={6}
                   height={6}
                 />
@@ -561,8 +572,8 @@ export default function Home(props) {
               <div className={cn("ml-12 mt-1")}>
                 <WinsIcon
                   icon={<AccountIcon />}
-                  color="text-red"
-                  title="PROFILE"
+                  color='text-red'
+                  title='PROFILE'
                   width={5}
                   height={5}
                 />
@@ -581,6 +592,224 @@ export default function Home(props) {
           </button>
         </div>
       </section>
+
+      <section>
+        <div className={cn()}></div>
+      </section>
+
+      <script src='script.js'></script>
+      <section className={cn("pt-12")}>
+        <div className={cn("grid grid-cols-4")}>
+          <div className={cn("col-span-3")}>
+            <div className={cn("border-2 border-black p-4")}>
+              <div className={cn("flex")}>
+                <div className={cn("flex-shrink")}>
+                  <img
+                    className={cn("h-40 w-60")}
+                    src='https://cdn.pixabay.com/photo/2021/12/07/14/00/river-6853339__480.jpg'
+                    alt=''
+                  />
+                </div>
+                <div className={cn("flex-shrink")}>
+                  <div>title:</div>
+                  <div className={cn("pt-28")}>description:</div>
+                </div>
+                <div className={cn("flex-shrink")}>
+                  <div>price:</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className={cn("border-2 border-black")}>3D</button>
+        </div>
+      </section>
+
+      <button className={cn("border-2")}>asdsadsadsadsad</button>
+
+      <section className={cn("pt-12 pb-12")}>
+        <div>
+          <p className={cn("bg-black text-white text-center p-16")}>MERSAD</p>
+        </div>
+      </section>
+
+      <section>
+        <div className={cn("border-2 border-green-200 rounded-xl p-4 w-60")}>
+          <div className={cn("text-2xl")}>Header Aa Bb Cc 38PX</div>
+          <div className={cn("text-xs")}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod Lorem ipsum dolor sit amet, consetetur
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div
+          className={cn(
+            "border-2 border-green-200 rounded-xl p-4 w-60 bg-black"
+          )}
+        >
+          <div className={cn("text-2xl text-green-400")}>
+            Header Aa Bb Cc 38PX
+          </div>
+          <div className={cn("text-xs text-white")}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod Lorem ipsum dolor sit amet, consetetur
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={cn("border-2 p-2")}>
+          <div className={cn("grid grid-cols-3")}>
+            <div className={cn("col-span-1")}>
+              <p className={cn("text-blue-500 text-sm")}>Action</p>
+            </div>
+            <div className={cn("col-span-1")}>
+              <p>Title</p>
+            </div>
+            <div className={cn("col-span-1")}>
+              <p className={cn("text-blue-500 text-sm")}>Action</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <button className={cn("bg-green-200 rounded-full p-2")}>
+          <p className={cn("text-sm text-black")}>primary button</p>
+        </button>
+      </section>
+
+      <section>
+        <button className={cn("bg-black rounded-full p-2")}>
+          <p className={cn("text-sm text-green-200")}>secondary</p>
+        </button>
+      </section>
+
+      <section>
+        <div
+          className={cn("bg-black flex justify-center justify-items-center")}
+        >
+          <SvgrMirsadLogo />
+        </div>
+      </section>
+
+      <section>
+        <p className={cn("text-black")}>choose your</p>
+        <p className={cn("text-white")}>language</p>
+      </section>
+
+      <section>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("text-center")}>why</div>
+          <div className={cn("text-green-300 text-center text-xl font-bold")}>
+            mirsad
+          </div>
+
+          <div className={cn("relative")}>
+            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
+              <p className={cn("text-sm")}>
+                With Mirsad, you’re an agent of justice keeping your city safe,
+                an actor of progress from the simple convenience of your phone!
+                Each one of your reports helps shape the world into a better
+                place and earns you a reward.
+              </p>
+            </div>
+            <div className={cn("absolute -top-16")}></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("text-center")}>how</div>
+          <div className={cn("text-green-300 text-center text-xl font-bold")}>
+            it works
+          </div>
+
+          <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
+            <div className={cn("flex")}>
+              <div className={cn("flex-shrink cursor-pointer")}>
+                <SvgrCamera />
+              </div>
+              <div className={cn("flex-shrink")}>
+                <p className={cn("text-center ml-2")}>
+                  Take a picture, film a video, or record an audio file.
+                </p>
+              </div>
+            </div>
+            <div className={cn("flex mt-4")}>
+              <div className={cn("flex-shrink cursor-pointer")}>
+                <SvgrFile />
+              </div>
+              <div className={cn("flex-shrink")}>
+                <p className={cn("text-center ml-2")}>
+                  Fill a report with your information.
+                </p>
+              </div>
+            </div>
+            <div className={cn("flex mt-4")}>
+              <div className={cn("flex-shrink cursor-pointer")}>
+                <SvgrSubmit />
+              </div>
+              <div className={cn("flex-shrink")}>
+                <p className={cn("text-center ml-2")}>
+                  Submit your report and wait to claim your reward.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className={cn("bg-gray-100")}>
+          <div className={cn("text-center text-2xl")}>welcome on board</div>
+          <div className={cn("text-green-300 text-center text-xl font-bold")}>
+            future agent!
+          </div>
+
+          <div className={cn("relative")}>
+            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
+              <div className={cn("pb-3.5")}>
+                <p className={cn("text-sm text-center font-bold")}>sign up</p>
+                <p className={cn("text-sm text-center text-gray-500")}>
+                  sign-up, your city needs you
+                </p>
+              </div>
+              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
+                <input
+                  placeholder='Phone number'
+                  className={cn(
+                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
+                  )}
+                  type='text'
+                  name=''
+                  id=''
+                />
+              </div>
+              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
+                <input
+                  placeholder='password'
+                  className={cn(
+                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
+                  )}
+                  type='text'
+                  name=''
+                  id=''
+                />
+              </div>
+            </div>
+            <div className={cn("flex justify-center items-center")}>
+              <div className={cn("absolute -bottom-4")}>
+                <Button />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
     </div>
   );
 }
