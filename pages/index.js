@@ -1278,6 +1278,27 @@ export default function Home(props) {
           </form>
         </div>
       </section>
+
+      <section>
+        <div className={cn("flex")}>
+          <div className={cn("flex-shrink")}>
+            <input type='checkbox' />
+          </div>
+          <div className={cn("flex-shrink-0 ml-3")}>
+            <p>
+              I agree to Mirsad's
+              <span className={cn("font-bold underline")}>
+                terms and conditions
+                <span className={cn("font-normal no-underline")}>
+                  {" "}
+                  and
+                </span>{" "}
+                privacy policy
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
