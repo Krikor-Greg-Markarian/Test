@@ -840,6 +840,21 @@ export default function Home(props) {
           <IlligalParking title={item.title} description={item.description} />
         ))}
       </section>
+
+      <section className='pt-12 pb-12'>
+        <div className={cn("bg-white rounded-xl p-6")}>
+          <div className={cn("grid grid-cols-2")}>
+            <div className={cn("col-span-1 text-center")}>
+              <p className={cn("text-gray-400 text-sm")}>type</p>
+              <p className={cn("font-bold")}>traffic</p>
+            </div>
+            <div className={cn("col-span-1 text-center")}>
+              <p className={cn("text-gray-400 text-sm")}>subcategroyr</p>
+              <p className={cn("font-bold")}>wrong</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
