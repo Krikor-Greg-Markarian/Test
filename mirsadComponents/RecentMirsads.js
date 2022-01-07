@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import Button from "./Button";
+import Button2 from "./Button2";
 function RecentMirsads(props) {
   return (
     <div
@@ -13,12 +13,16 @@ function RecentMirsads(props) {
       />
 
       <div className={cn("p-4")}>
-        <Button />
-        <p>long title of the case goes here</p>
-        <p>category</p>
-        <div className={cn("flex justify-center items-center pt-2 pb-2")}>
-          <hr className={cn("w-9/12")}></hr>
-        </div>
+        <Button2 className={cn("bg-yellow-400 rounded-full w-6/12")} />
+        <p className={cn("font-bold text-sm")}>
+          long title of the case goes here
+        </p>
+        <p className={cn(" text-sm pb-3 border-b-2")}>category</p>
+        <div
+          className={cn(
+            "flex justify-center items-center pt-2 pb-2 "
+          )}
+        ></div>
         <div className={cn("grid grid-cols-2")}>
           <div className={cn("col-span-1")}>
             <p>01/02/2021</p>
