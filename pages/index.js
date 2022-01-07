@@ -43,6 +43,7 @@ import GladToHaveYou2 from "../mirsadComponents/GladToHaveYou2";
 import Mailbox from "../mirsadComponents/Mailbox";
 import ReportType from "../mirsadComponents/ReportType";
 import DescriptionBox from "../mirsadComponents/DescriptionBox";
+import ReportTypeBlack from "../mirsadComponents/ReportTypeBlack";
 
 export default function Home(props) {
   return (
@@ -824,7 +825,7 @@ export default function Home(props) {
         </form>
       </section>
 
-      <section>
+      <section className='pt-12 pb-12'>
         <form className={cn("pt-1")} action=''>
           <select
             className={cn(
@@ -839,31 +840,9 @@ export default function Home(props) {
       </section>
 
       <section className='pt-12 pb-12'>
-        <div className={cn("bg-white rounded-lg p-6")}>
-          <p className={cn("pb-3")}>report type</p>
-          <form className={cn("pb-2")} action=''>
-            <select
-              className={cn(
-                "w-full rounded-xl p-2 bg-white border-2 text-black border-gray-100"
-              )}
-              name=''
-              id=''
-            >
-              <option value=''>traffic violation</option>
-            </select>
-          </form>
-          <form action=''>
-            <select
-              className={cn(
-                "w-full rounded-xl p-2 bg-white border-2 text-black border-gray-100"
-              )}
-              name=''
-              id=''
-            >
-              <option value=''>seatbelt</option>
-            </select>
-          </form>
-        </div>
+        {props.reportTypeBlack.map((item, idx) => (
+          <ReportTypeBlack text={item.text} />
+        ))}
       </section>
 
       <section>
@@ -910,6 +889,7 @@ export async function getServerSideProps(context) {
       mailBox: response.data.mailBox,
       reportType: response.data.reportType,
       descriptionBox: response.data.descriptionBox,
+      reportTypeBlack: response.data.reportTypeBlack,
     }, // will be passed to the page component as props
   };
 }

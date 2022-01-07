@@ -125,6 +125,11 @@ export default function handler(req, res) {
         text: "description",
       },
     ],
+    reportTypeBlack: [
+      {
+        text: "report type",
+      },
+    ],
   };
   res.status(200).json(object);
 }
