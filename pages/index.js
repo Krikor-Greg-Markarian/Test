@@ -25,22 +25,23 @@ import NotInterestedIcon from "../components/icons/NotInterestedIcon";
 import RedHeksagonIcon from "../components/icons/RedHeksagonIcon";
 import RightArrowIconRed from "../components/icons/RightArrowIconRed";
 import WhiteHeksagonIcon from "../components/icons/WhiteHeksagonIcon";
-import SvgrMirsadLogo from "../svgrMirsad/SvgrMirsadLogo";
-import ShadowBox from "../mirsadComponents/ShadovBox";
-import SvgrQuestionMark from "../svgrMirsad/SvgrQuestionMark";
-import SvgrCamera from "../svgrMirsad/SvgrCamera";
-import SvgrFile from "../svgrMirsad/SvgrFile";
-import SvgrSubmit from "../svgrMirsad/SvgrSubmit";
 import Button from "../mirsadComponents/Button";
-import CardShadow from "../mirsadComponents/CardShadow";
-import CardShadowRec from "../mirsadComponents/CardShadowRec";
-import BoxWithButton from "../mirsadComponents/BoxWithButton";
-import BoxWithShadow from "../mirsadComponents/BoxWithShadow";
-import SvgrAttach from "../mirsadComponents/SvgrAttach";
-import SvgrCircleNumb from "../mirsadComponents/SvgrCircleNumb";
-import SvgrCircleNumb2 from "../mirsadComponents/SvgrCircleNumb";
+
 import SvgrMailBox from "../svgrMirsad/SvgrMailBox";
-import SvgrGettingthere from "../svgrMirsad/SvgrGettingthere";
+import BoxWithDiscriptions from "../mirsadComponents/BoxWithDiscriptions";
+import axios from "axios";
+import BlackBoxWithDescription from "../mirsadComponents/BlackBoxWithDescription";
+import GreenBackgroundButton from "../mirsadComponents/GreenBackgroundButton";
+import BlackBackgroundColor from "../mirsadComponents/BlackBackgroundColor";
+import WhyMirsad from "../mirsadComponents/WhyMirsad";
+import AttachIconWithDescription from "../mirsadComponents/AttachIconWithDescription";
+import WelcomeSignUp from "../mirsadComponents/WelcomeSignUp";
+import VerifyPhoneNumber from "../mirsadComponents/VerifyPhoneNumber";
+import GettingThere from "../mirsadComponents/GettingThere";
+import GladToHaveYou from "../mirsadComponents/GladToHaveYou";
+import GladToHaveYou2 from "../mirsadComponents/GladToHaveYou2";
+import Mailbox from "../mirsadComponents/Mailbox";
+import ReportType from "../mirsadComponents/ReportType";
 
 export default function Home(props) {
   return (
@@ -638,29 +639,23 @@ export default function Home(props) {
       </section>
 
       <section>
-        <div className={cn("border-2 border-green-200 rounded-xl p-4 w-60")}>
-          <div className={cn("text-2xl")}>Header Aa Bb Cc 38PX</div>
-          <div className={cn("text-xs")}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod Lorem ipsum dolor sit amet, consetetur
-          </div>
-        </div>
+        {props.box.map((item, idx) => (
+          <BoxWithDiscriptions
+            key={idx}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
       </section>
 
       <section>
-        <div
-          className={cn(
-            "border-2 border-green-200 rounded-xl p-4 w-60 bg-black"
-          )}
-        >
-          <div className={cn("text-2xl text-green-400")}>
-            Header Aa Bb Cc 38PX
-          </div>
-          <div className={cn("text-xs text-white")}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod Lorem ipsum dolor sit amet, consetetur
-          </div>
-        </div>
+        {props.blackBox.map((item, idx) => (
+          <BlackBoxWithDescription
+            key={idx}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
       </section>
 
       <section>
@@ -680,23 +675,15 @@ export default function Home(props) {
       </section>
 
       <section>
-        <button className={cn("bg-green-200 rounded-full p-2")}>
-          <p className={cn("text-sm text-black")}>primary button</p>
-        </button>
+        {props.greenButton.map((item, idx) => (
+          <GreenBackgroundButton buttonName={item.buttonName} />
+        ))}
       </section>
 
       <section>
-        <button className={cn("bg-black rounded-full p-2")}>
-          <p className={cn("text-sm text-green-200")}>secondary</p>
-        </button>
-      </section>
-
-      <section>
-        <div
-          className={cn("bg-black flex justify-center justify-items-center")}
-        >
-          <SvgrMirsadLogo />
-        </div>
+        {props.blackButton.map((item, idx) => (
+          <BlackBackgroundColor buttonName={item.buttonName} />
+        ))}
       </section>
 
       <section>
@@ -705,500 +692,109 @@ export default function Home(props) {
       </section>
 
       <section>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("text-center")}>why</div>
-          <div className={cn("text-green-300 text-center text-xl font-bold")}>
-            mirsad
-          </div>
-
-          <div className={cn("relative")}>
-            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
-              <p className={cn("text-sm")}>
-                With Mirsad, you’re an agent of justice keeping your city safe,
-                an actor of progress from the simple convenience of your phone!
-                Each one of your reports helps shape the world into a better
-                place and earns you a reward.
-              </p>
-            </div>
-            <div className={cn("absolute -top-16")}></div>
-          </div>
-        </div>
+        {props.whyMirsad.map((item, idx) => (
+          <WhyMirsad
+            why={item.why}
+            mirsad={item.mirsad}
+            description={item.description}
+          />
+        ))}
       </section>
 
       <section>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("text-center")}>how</div>
-          <div className={cn("text-green-300 text-center text-xl font-bold")}>
-            it works
-          </div>
-
-          <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
-            <div className={cn("flex")}>
-              <div className={cn("flex-shrink cursor-pointer")}>
-                <SvgrCamera />
-              </div>
-              <div className={cn("flex-shrink")}>
-                <p className={cn("text-center ml-2")}>
-                  Take a picture, film a video, or record an audio file.
-                </p>
-              </div>
-            </div>
-            <div className={cn("flex mt-4")}>
-              <div className={cn("flex-shrink cursor-pointer")}>
-                <SvgrFile />
-              </div>
-              <div className={cn("flex-shrink")}>
-                <p className={cn("text-center ml-2")}>
-                  Fill a report with your information.
-                </p>
-              </div>
-            </div>
-            <div className={cn("flex mt-4")}>
-              <div className={cn("flex-shrink cursor-pointer")}>
-                <SvgrSubmit />
-              </div>
-              <div className={cn("flex-shrink")}>
-                <p className={cn("text-center ml-2")}>
-                  Submit your report and wait to claim your reward.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {props.howitworks.map((item, idx) => (
+          <AttachIconWithDescription
+            how={item.how}
+            itworks={item.itworks}
+            pictureDiscription={item.pictureDiscription}
+            reportDiscription={item.reportDiscription}
+            submitDescription={item.submitDescription}
+          />
+        ))}
       </section>
 
       <section>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("text-center text-2xl")}>welcome on board</div>
-          <div className={cn("text-green-300 text-center text-xl font-bold")}>
-            future agent!
-          </div>
-
-          <div className={cn("relative")}>
-            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
-              <div className={cn("pb-3.5")}>
-                <p className={cn("text-sm text-center font-bold")}>sign up</p>
-                <p className={cn("text-sm text-center text-gray-500")}>
-                  sign-up, your city needs you
-                </p>
-              </div>
-              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
-                <input
-                  placeholder='Phone number'
-                  className={cn(
-                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
-                  )}
-                  type='text'
-                  name=''
-                  id=''
-                />
-              </div>
-              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
-                <input
-                  placeholder='password'
-                  className={cn(
-                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
-                  )}
-                  type='text'
-                  name=''
-                  id=''
-                />
-              </div>
-            </div>
-            <div className={cn("flex justify-center items-center")}>
-              <div className={cn("absolute -bottom-4")}>
-                <Button />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("text-center text-2xl")}>verify your</div>
-          <div className={cn("text-green-300 text-center text-xl font-bold")}>
-            phone number
-          </div>
-
-          <div className={cn("relative")}>
-            <div
-              className={cn("bg-gray-50 container p-4 rounded-lg pt-20 pb-20")}
-            >
-              <div className={cn("pb-3.5")}>
-                <p className={cn("text-sm text-center text-gray-500")}>
-                  Verify your number with the code sent
-                </p>
-                <div className={cn("flex justify-center items-center pt-6")}>
-                  <div className={cn("flex-shrink-0 ")}>
-                    <div
-                      className={cn(
-                        " flex justify-center shadow-2xl items-center w-12 h-12 rounded-lg bg-white"
-                      )}
-                    >
-                      5
-                    </div>
-                  </div>
-                  <div className={cn("flex-shrink-0 ml-4")}>
-                    <div
-                      className={cn(
-                        " flex justify-center items-center w-12 h-12 rounded-lg shadow-2xl bg-white"
-                      )}
-                    ></div>
-                  </div>
-                  <div className={cn("flex-shrink-0 ml-4")}>
-                    <div
-                      className={cn(
-                        " flex justify-center items-center w-12 h-12 rounded-lg shadow-2xl bg-white"
-                      )}
-                    ></div>
-                  </div>
-                  <div className={cn("flex-shrink-0 ml-4")}>
-                    <div
-                      className={cn(
-                        " flex justify-center items-center w-12 h-12 rounded-lg shadow-2xl bg-white"
-                      )}
-                    ></div>
-                  </div>
-                </div>
-                <p className={cn("text-sm text-center text-gray-500 pt-6")}>
-                  i did not receive a code
-                </p>
-                <p
-                  className={cn(
-                    "underline text-center text-black cursor-pointer "
-                  )}
-                >
-                  resend
-                </p>
-              </div>
-            </div>
-            <div className={cn("flex justify-center items-center")}>
-              <div className={cn("absolute -bottom-4")}>
-                <Button />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("text-center")}>you're getting</div>
-          <div className={cn("text-green-300 text-center text-xl font-bold")}>
-            there
-          </div>
-
-          <div className={cn("relative")}>
-            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
-              <p className={cn("font-bold text-center")}>
-                one step closer to become a mirsad agent
-              </p>
-              <p className={cn("text-center text-sm text-gray-400")}>
-                All you have to do is book an appointment with us and help the
-                Mirsad community grow faster.
-              </p>
-            </div>
-            <div className={cn("flex justify-center items-center")}>
-              <div className={cn("absolute -bottom-4")}>
-                <Button />
-              </div>
-              <div className='absolute top-0'>
-                <SvgrGettingthere />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className={cn(
-            "underline flex justify-center items-center pt-6 cursor-pointer"
-          )}
-        >
-          skip
-        </div>
-      </section>
-
-      <section className={cn("pt-12 pb-12")}>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("text-center text-2xl")}>we're glad to have </div>
-          <div className={cn("text-green-300 text-center text-xl font-bold")}>
-            you <span className={cn("text-black font-normal")}>here</span>
-          </div>
-          <div className={cn("flex justify-center items-center pt-8 pb-8")}>
-            <SvgrCircleNumb />
-          </div>
-          <div className={cn("relative")}>
-            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
-              <div className={cn("pb-3.5")}>
-                <p className={cn("text-sm text-center font-bold")}>
-                  please fill in the registration form to become a mirsad agent
-                </p>
-              </div>
-              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
-                <input
-                  placeholder='full name'
-                  className={cn(
-                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
-                  )}
-                  type='text'
-                  name=''
-                  id=''
-                />
-              </div>
-              <div className={cn("pt-2 pb-2 flex justify-center items-center")}>
-                <input
-                  placeholder='email'
-                  className={cn(
-                    "w-full rounded-xl p-1.5 border-2 border-gray-100"
-                  )}
-                  type='text'
-                  name=''
-                  id=''
-                />
-              </div>
-
-              <form action=''>
-                <select
-                  className={cn(
-                    "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
-                  )}
-                  name=''
-                  id=''
-                >
-                  <option value=''>choose the location of the quiz</option>
-                </select>
-              </form>
-              <form className={cn("pt-2 pb-2")} action=''>
-                <select
-                  className={cn(
-                    "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
-                  )}
-                  name=''
-                  id=''
-                >
-                  <option value=''>choose the category</option>
-                </select>
-              </form>
-              <div className={cn("flex mt-2")}>
-                <div className={cn("flex-shrink-0 mt-1")}>
-                  <SvgrAttach />
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <p>attach an image of yourself</p>
-                </div>
-              </div>
-              <div className={cn("flex mt-2")}>
-                <div className={cn("flex-shrink-0 mt-1")}>
-                  <SvgrAttach />
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <p>attach criminal record paper</p>
-                </div>
-              </div>
-              <div className={cn("flex mt-2")}>
-                <div className={cn("flex-shrink-0 mt-1")}>
-                  <SvgrAttach />
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <p>attach good conduct and behavior</p>
-                </div>
-              </div>
-            </div>
-            <div className={cn("flex justify-center items-center")}>
-              <div className={cn("absolute -bottom-4")}>
-                <Button />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={cn("pt-12 pb-12")}>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("text-center text-2xl")}>we're glad to have </div>
-          <div className={cn("text-green-300 text-center text-xl font-bold")}>
-            you <span className={cn("text-black font-normal")}>here</span>
-          </div>
-          <div className={cn("flex justify-center items-center pt-8 pb-8")}>
-            <SvgrCircleNumb2 />
-          </div>
-          <div className={cn("relative")}>
-            <div className={cn("bg-white p-4 rounded-lg pt-20 pb-20")}>
-              <div className={cn("pb-3.5")}>
-                <p className={cn("text-sm text-center font-bold")}>
-                  additional information, for a more customized experience
-                </p>
-              </div>
-
-              <form action=''>
-                <select
-                  className={cn(
-                    "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
-                  )}
-                  name=''
-                  id=''
-                >
-                  <option value=''>
-                    choose the region you prefer to cover
-                  </option>
-                </select>
-              </form>
-              <p className={cn("pt-4  pb-4")}>
-                choose between the available dates
-              </p>
-              <div className={cn("flex mt-2")}>
-                <div className={cn("flex-shrink-0 ")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    12 dec
-                  </div>
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    25 jan
-                  </div>
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    3 feb
-                  </div>
-                </div>
-              </div>
-              <div className={cn("flex mt-2")}>
-                <div className={cn("flex-shrink-0 ")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    14 mar
-                  </div>
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    25 apr
-                  </div>
-                </div>
-              </div>
-              <p className={cn("pt-4  pb-4")}>
-                choose between the available timings
-              </p>
-              <div className={cn("flex mt-2")}>
-                <div className={cn("flex-shrink-0 ")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    1 pm
-                  </div>
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    3 pm
-                  </div>
-                </div>
-                <div className={cn("flex-shrink-0 ml-2")}>
-                  <div
-                    className={cn(
-                      "rounded-lg bg-gray-100 text-center px-6 py-1 text-sm cursor-pointer"
-                    )}
-                  >
-                    5 pm
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className={cn("flex justify-center items-center")}>
-              <div className={cn("absolute -bottom-4")}>
-                <Button />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={cn("pt-12 pb-12")}>
-        <div className={cn("bg-gray-100")}>
-          <div className={cn("pb-24")}>
-            <div className={cn("text-center text-2xl")}>
-              turn on your mailbox
-            </div>
-            <div className={cn("text-green-300 text-center text-xl font-bold")}>
-              notifications
-            </div>
-          </div>
-          <div className={cn("relative")}>
-            <div className={cn("bg-white p-4 rounded-lg pt-40 pb-40")}>
-              <div className={cn("pb-3.5")}>
-                <p className={cn("text-sm text-center font-bold pt-8")}>
-                  check your mailbox
-                </p>
-                <p className={cn("text-xs p-4 text-gray-400")}>
-                  You will receive a QR code by email, which should be shown to
-                  our Mirsad team at the chosen location of your quiz.
-                </p>
-              </div>
-            </div>
-            <div className={cn("flex justify-center items-center")}>
-              <div className={cn("absolute -bottom-4")}>
-                <Button />
-              </div>
-            </div>
-            <div className={cn("flex justify-center items-center")}>
-              <div className={cn("absolute -top-12 ")}>
-                <SvgrMailBox />
-              </div>
-            </div>
-          </div>
-        </div>
+        {props.WelcomeSignUp.map((item, idx) => (
+          <WelcomeSignUp
+            greetings={item.greetings}
+            futureAgent={item.futureAgent}
+            signUp={item.signUp}
+            description={item.description}
+            buttonName={item.buttonName}
+          />
+        ))}
       </section>
 
       <section className='pt-12 pb-12'>
-        <div className={cn("bg-white rounded-lg p-6")}>
-          <p className={cn("pb-3")}>report type</p>
-          <form className={cn("pb-2")} action=''>
-            <select
-              className={cn(
-                "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
-              )}
-              name=''
-              id=''
-            >
-              <option value=''>what type of infringement is it ?</option>
-            </select>
-          </form>
-          <form action=''>
-            <select
-              className={cn(
-                "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
-              )}
-              name=''
-              id=''
-            >
-              <option value=''>choose between the</option>
-            </select>
-          </form>
-        </div>
+        {props.VerifyPhoneNumber.map((item, idx) => (
+          <VerifyPhoneNumber
+            verify={item.verify}
+            phoneNumber={item.phoneNumber}
+            description={item.description}
+            didNotReceive={item.didNotReceive}
+            resend={item.resend}
+            buttonName={item.buttonName}
+          />
+        ))}
+      </section>
+
+      <section className='pt-12 pb-12'>
+        {props.gettingThere.map((item, idx) => (
+          <GettingThere
+            getting={item.getting}
+            there={item.there}
+            title={item.title}
+            description={item.description}
+            buttonName={item.buttonName}
+            name={item.name}
+          />
+        ))}
+      </section>
+
+      <section className={cn("pt-12 pb-12")}>
+        {props.gladToHaveYouHere.map((item, idx) => (
+          <GladToHaveYou
+            glad={item.glad}
+            you={item.you}
+            here={item.here}
+            title={item.title}
+            attachImage={item.attachImage}
+            attachRecord={item.attachRecord}
+            attachConduct={item.attachConduct}
+            buttonName={item.buttonName}
+          />
+        ))}
+      </section>
+
+      <section className={cn("pt-12 pb-12")}>
+        {props.gladToHaveYouHere2.map((item, idx) => (
+          <GladToHaveYou2
+            glad={item.glad}
+            you={item.you}
+            here={item.here}
+            title={item.title}
+            chooseDates={item.chooseDates}
+            chooseTiming={item.chooseTiming}
+            buttonName={item.buttonName}
+          />
+        ))}
+      </section>
+      {props.mailBox.map((item, idx) => (
+        <Mailbox
+          mailBox={item.mailBox}
+          notification={item.notification}
+          checkMailBox={item.checkMailBox}
+          description={item.description}
+          buttonName={item.buttonName}
+        />
+      ))}
+
+      <section className={cn("pt-12 pb-12")}></section>
+
+      <section className='pt-12 pb-12'>
+        {props.reportType.map((item, idx) => (
+          <ReportType name={item.name} />
+        ))}
       </section>
 
       <section className='pt-12 pb-12'>
@@ -1301,4 +897,27 @@ export default function Home(props) {
       </section>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const response = await axios.get("http://localhost:3000/api/hello");
+
+  return {
+    props: {
+      box: response.data.box,
+      blackBox: response.data.blackBox,
+      greenButton: response.data.greenButton,
+      blackButton: response.data.blackButton,
+      whyMirsad: response.data.whyMirsad,
+      howitworks: response.data.howitworks,
+      WelcomeSignUp: response.data.WelcomeSignUp,
+      VerifyPhoneNumber: response.data.VerifyPhoneNumber,
+      gettingThere: response.data.gettingThere,
+      skipOrAnyOtherButton: response.data.skipOrAnyOtherButton,
+      gladToHaveYouHere: response.data.gladToHaveYouHere,
+      gladToHaveYouHere2: response.data.gladToHaveYouHere2,
+      mailBox: response.data.mailBox,
+      reportType: response.data.reportType,
+    }, // will be passed to the page component as props
+  };
 }
