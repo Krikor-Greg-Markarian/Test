@@ -145,6 +145,13 @@ export default function handler(req, res) {
         submitted: "submitted",
       },
     ],
+
+    IlligalParking: [
+      {
+        title: "Illegal parking in wrong spot",
+        description: "unpayed parking in the city",
+      },
+    ],
   };
   res.status(200).json(object);
 }
