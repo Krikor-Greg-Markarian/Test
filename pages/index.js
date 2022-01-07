@@ -42,6 +42,7 @@ import GladToHaveYou from "../mirsadComponents/GladToHaveYou";
 import GladToHaveYou2 from "../mirsadComponents/GladToHaveYou2";
 import Mailbox from "../mirsadComponents/Mailbox";
 import ReportType from "../mirsadComponents/ReportType";
+import DescriptionBox from "../mirsadComponents/DescriptionBox";
 
 export default function Home(props) {
   return (
@@ -798,19 +799,9 @@ export default function Home(props) {
       </section>
 
       <section className='pt-12 pb-12'>
-        <div className={cn("bg-white rounded-lg p-6")}>
-          <p className={cn("pb-3")}>description</p>
-          <div className={cn("border-2 border-gray-200 rounded-xl")}>
-            <textarea
-              className={cn("p-3")}
-              placeholder='write your description about mirsad resport here'
-              name=''
-              id=''
-              cols='40'
-              rows='10'
-            ></textarea>
-          </div>
-        </div>
+        {props.descriptionBox.map((item, idx) => (
+          <DescriptionBox text={item.text} />
+        ))}
       </section>
 
       <section className='pt-12 pb-12'>
@@ -918,6 +909,7 @@ export async function getServerSideProps(context) {
       gladToHaveYouHere2: response.data.gladToHaveYouHere2,
       mailBox: response.data.mailBox,
       reportType: response.data.reportType,
+      descriptionBox: response.data.descriptionBox,
     }, // will be passed to the page component as props
   };
 }

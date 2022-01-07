@@ -120,6 +120,11 @@ export default function handler(req, res) {
         text: "report type",
       },
     ],
+    descriptionBox: [
+      {
+        text: "description",
+      },
+    ],
   };
   res.status(200).json(object);
 }
