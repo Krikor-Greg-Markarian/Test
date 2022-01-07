@@ -48,6 +48,7 @@ import TermsCondBox from "../mirsadComponents/TermsCondBox";
 import ReportSubmitted from "../mirsadComponents/ReportSubmitted";
 import IlligalParking from "../mirsadComponents/IlligalParking";
 import TypeOfInfringment from "../mirsadComponents/TypeOfInfringment";
+import DescriptionBoxWhite from "../mirsadComponents/DescriptionBoxWhite";
 
 export default function Home(props) {
   return (
@@ -853,8 +854,13 @@ export default function Home(props) {
         ))}
       </section>
 
-      <section className="pt-12 pb-12">
-
+      <section className='pt-12 pb-12'>
+        {props.DescriptionBoxWhite.map((item, idx) => (
+          <DescriptionBoxWhite
+            title={item.title}
+            description={item.description}
+          />
+        ))}
       </section>
     </div>
   );
@@ -885,6 +891,7 @@ export async function getServerSideProps(context) {
       reportSubmitted: response.data.reportSubmitted,
       IlligalParking: response.data.IlligalParking,
       TypeOfInfringment: response.data.TypeOfInfringment,
+      DescriptionBoxWhite: response.data.DescriptionBoxWhite,
     }, // will be passed to the page component as props
   };
 }

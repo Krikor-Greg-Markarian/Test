@@ -152,7 +152,7 @@ export default function handler(req, res) {
         description: "unpayed parking in the city",
       },
     ],
-    
+
     TypeOfInfringment: [
       {
         title: "Type of infrigement",
@@ -162,6 +162,13 @@ export default function handler(req, res) {
       },
     ],
 
+    DescriptionBoxWhite: [
+      {
+        title: "Description",
+        description:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste assumendanostrum cupiditate nemo, laborum velit necessitatibus delenitiperspiciatis. Eum distinctio quidem perferendis incidunt. Magnam,voluptatem ab eius ducimus ipsum enim?",
+      },
+    ],
   };
   res.status(200).json(object);
 }
