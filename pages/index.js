@@ -852,6 +852,10 @@ export default function Home(props) {
           />
         ))}
       </section>
+
+      <section className="pt-12 pb-12">
+
+      </section>
     </div>
   );
 }
