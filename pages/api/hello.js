@@ -152,6 +152,16 @@ export default function handler(req, res) {
         description: "unpayed parking in the city",
       },
     ],
+    
+    TypeOfInfringment: [
+      {
+        title: "Type of infrigement",
+        description: "Traffic",
+        subTitle: "Subcategory",
+        subDescription: "Wrong parking",
+      },
+    ],
+
   };
   res.status(200).json(object);
 }

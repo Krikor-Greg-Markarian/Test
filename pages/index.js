@@ -47,6 +47,7 @@ import ReportTypeBlack from "../mirsadComponents/ReportTypeBlack";
 import TermsCondBox from "../mirsadComponents/TermsCondBox";
 import ReportSubmitted from "../mirsadComponents/ReportSubmitted";
 import IlligalParking from "../mirsadComponents/IlligalParking";
+import TypeOfInfringment from "../mirsadComponents/TypeOfInfringment";
 
 export default function Home(props) {
   return (
@@ -842,18 +843,14 @@ export default function Home(props) {
       </section>
 
       <section className='pt-12 pb-12'>
-        <div className={cn("bg-white rounded-xl p-6")}>
-          <div className={cn("grid grid-cols-2")}>
-            <div className={cn("col-span-1 text-center")}>
-              <p className={cn("text-gray-400 text-sm")}>type</p>
-              <p className={cn("font-bold")}>traffic</p>
-            </div>
-            <div className={cn("col-span-1 text-center")}>
-              <p className={cn("text-gray-400 text-sm")}>subcategroyr</p>
-              <p className={cn("font-bold")}>wrong</p>
-            </div>
-          </div>
-        </div>
+        {props.TypeOfInfringment.map((item, idx) => (
+          <TypeOfInfringment
+            title={item.title}
+            description={item.description}
+            subTitle={item.subTitle}
+            subDescription={item.subDescription}
+          />
+        ))}
       </section>
     </div>
   );
@@ -883,6 +880,7 @@ export async function getServerSideProps(context) {
       TermsCondBox: response.data.TermsCondBox,
       reportSubmitted: response.data.reportSubmitted,
       IlligalParking: response.data.IlligalParking,
+      TypeOfInfringment: response.data.TypeOfInfringment,
     }, // will be passed to the page component as props
   };
 }
