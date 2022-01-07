@@ -130,6 +130,21 @@ export default function handler(req, res) {
         text: "report type",
       },
     ],
+    TermsCondBox: [
+      {
+        agree: "  I agree to Mirsad's",
+        terms: " terms and conditions",
+        and: "  and",
+        privacyPolicy: "privacy policy",
+      },
+    ],
+    reportSubmitted: [
+      {
+        title: "your report has",
+        been: "been",
+        submitted: "submitted",
+      },
+    ],
   };
   res.status(200).json(object);
 }

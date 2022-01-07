@@ -44,6 +44,8 @@ import Mailbox from "../mirsadComponents/Mailbox";
 import ReportType from "../mirsadComponents/ReportType";
 import DescriptionBox from "../mirsadComponents/DescriptionBox";
 import ReportTypeBlack from "../mirsadComponents/ReportTypeBlack";
+import TermsCondBox from "../mirsadComponents/TermsCondBox";
+import ReportSubmitted from "../mirsadComponents/ReportSubmitted";
 
 export default function Home(props) {
   return (
@@ -806,64 +808,30 @@ export default function Home(props) {
       </section>
 
       <section className='pt-12 pb-12'>
-        <p className={cn("text-center underline cursor-pointer")}>
-          save to drafts
-        </p>
-      </section>
-
-      <section className='pt-12 pb-12'>
-        <form action=''>
-          <select
-            className={cn(
-              "w-full rounded-xl p-2 bg-white border-2 text-gray-400 border-gray-100"
-            )}
-            name=''
-            id=''
-          >
-            <option value=''>choose between the</option>
-          </select>
-        </form>
-      </section>
-
-      <section className='pt-12 pb-12'>
-        <form className={cn("pt-1")} action=''>
-          <select
-            className={cn(
-              "w-full rounded-xl p-2 bg-white border-2 text-black border-gray-100"
-            )}
-            name=''
-            id=''
-          >
-            <option value=''>traffic violation</option>
-          </select>
-        </form>
-      </section>
-
-      <section className='pt-12 pb-12'>
         {props.reportTypeBlack.map((item, idx) => (
           <ReportTypeBlack text={item.text} />
         ))}
       </section>
 
       <section>
-        <div className={cn("flex")}>
-          <div className={cn("flex-shrink")}>
-            <input type='checkbox' />
-          </div>
-          <div className={cn("flex-shrink-0 ml-3")}>
-            <p>
-              I agree to Mirsad's
-              <span className={cn("font-bold underline")}>
-                terms and conditions
-                <span className={cn("font-normal no-underline")}>
-                  {" "}
-                  and
-                </span>{" "}
-                privacy policy
-              </span>
-            </p>
-          </div>
-        </div>
+        {props.TermsCondBox.map((item, idx) => (
+          <TermsCondBox
+            agree={item.agree}
+            terms={item.terms}
+            and={item.and}
+            privacyPolicy={item.privacyPolicy}
+          />
+        ))}
+      </section>
+
+      <section className='pt-12 pb-12'>
+        {props.reportSubmitted.map((item, idx) => (
+          <ReportSubmitted
+            title={item.title}
+            been={item.been}
+            submitted={item.submitted}
+          />
+        ))}
       </section>
     </div>
   );
@@ -890,6 +858,8 @@ export async function getServerSideProps(context) {
       reportType: response.data.reportType,
       descriptionBox: response.data.descriptionBox,
       reportTypeBlack: response.data.reportTypeBlack,
+      TermsCondBox: response.data.TermsCondBox,
+      reportSubmitted: response.data.reportSubmitted,
     }, // will be passed to the page component as props
   };
 }
