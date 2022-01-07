@@ -13,12 +13,22 @@ function RecentMirsads(props) {
       />
 
       <div className={cn("p-4")}>
-        <Button2
-          buttonName={props.buttonName}
-          className={cn(
-            "bg-yellow-400 text-center text-sm text-white rounded-full w-5/12"
-          )}
-        />
+        {props.isPending ? (
+          <Button2
+            buttonName='pending'
+            className={cn(
+              "bg-yellow-400 text-center text-sm text-white rounded-full w-5/12"
+            )}
+          />
+        ) : (
+          <Button2
+            buttonName='approved'
+            className={cn(
+              "bg-green-500 text-center text-sm text-white rounded-full w-5/12"
+            )}
+          />
+        )}
+
         <p className={cn("font-bold text-sm")}>{props.title}</p>
         <p className={cn(" text-sm pb-3 border-b-2")}>{props.category}</p>
         <div

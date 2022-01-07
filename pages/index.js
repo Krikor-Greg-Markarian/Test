@@ -885,6 +885,7 @@ export default function Home(props) {
             date={item.date}
             time={item.time}
             buttonName={item.buttonName}
+            isPending={item.isPending}
           />
         ))}
       </section>

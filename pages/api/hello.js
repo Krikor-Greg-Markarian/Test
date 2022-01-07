@@ -186,7 +186,7 @@ export default function handler(req, res) {
         category: "category",
         date: "01/02/2021",
         time: "04:51 pm",
-        buttonName: "pending",
+        isPending: true,
       },
     ],
   };
