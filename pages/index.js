@@ -878,16 +878,15 @@ export default function Home(props) {
       </section>
 
       <section className='pt-12 pb-12'>
-
-
-            <RecentMirsads 
-            
-            
-            
-            
-            />
-
-
+        {props.recentMirsads.map((item, idx) => (
+          <RecentMirsads
+            title={item.title}
+            category={item.category}
+            date={item.date}
+            time={item.time}
+            buttonName={item.buttonName}
+          />
+        ))}
       </section>
     </div>
   );
@@ -920,6 +919,7 @@ export async function getServerSideProps(context) {
       TypeOfInfringment: response.data.TypeOfInfringment,
       DescriptionBoxWhite: response.data.DescriptionBoxWhite,
       profile: response.data.profile,
+      recentMirsads: response.data.recentMirsads,
     }, // will be passed to the page component as props
   };
 }

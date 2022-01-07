@@ -13,22 +13,23 @@ function RecentMirsads(props) {
       />
 
       <div className={cn("p-4")}>
-        <Button2 className={cn("bg-yellow-400 rounded-full w-6/12")} />
-        <p className={cn("font-bold text-sm")}>
-          long title of the case goes here
-        </p>
-        <p className={cn(" text-sm pb-3 border-b-2")}>category</p>
-        <div
+        <Button2
+          buttonName={props.buttonName}
           className={cn(
-            "flex justify-center items-center pt-2 pb-2 "
+            "bg-yellow-400 text-center text-sm text-white rounded-full w-5/12"
           )}
+        />
+        <p className={cn("font-bold text-sm")}>{props.title}</p>
+        <p className={cn(" text-sm pb-3 border-b-2")}>{props.category}</p>
+        <div
+          className={cn("flex justify-center items-center pt-2 pb-2 ")}
         ></div>
         <div className={cn("grid grid-cols-2")}>
           <div className={cn("col-span-1")}>
-            <p>01/02/2021</p>
+            <p className={cn("text-gray-400 text-sm")}>{props.date}</p>
           </div>
           <div className={cn("col-span-1")}>
-            <p>04:51 pm</p>
+            <p className={cn("text-gray-400 text-sm")}>{props.time}</p>
           </div>
         </div>
       </div>
