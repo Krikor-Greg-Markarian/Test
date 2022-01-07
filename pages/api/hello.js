@@ -169,6 +169,16 @@ export default function handler(req, res) {
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste assumendanostrum cupiditate nemo, laborum velit necessitatibus delenitiperspiciatis. Eum distinctio quidem perferendis incidunt. Magnam,voluptatem ab eius ducimus ipsum enim?",
       },
     ],
+
+    profile: [
+      {
+        greeting: "welcome Ahmad!",
+        location: "RIYADH, Saudia Arabia",
+        level: "Level 8",
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2021/10/07/15/12/wine-6688901__480.jpg",
+      },
+    ],
   };
   res.status(200).json(object);
 }

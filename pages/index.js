@@ -49,7 +49,10 @@ import ReportSubmitted from "../mirsadComponents/ReportSubmitted";
 import IlligalParking from "../mirsadComponents/IlligalParking";
 import TypeOfInfringment from "../mirsadComponents/TypeOfInfringment";
 import DescriptionBoxWhite from "../mirsadComponents/DescriptionBoxWhite";
-
+import SvgrLocation from "../svgrMirsad/SvgrLocation";
+import SvgrLevel from "../svgrMirsad/SvgrLevel";
+import Profile from "../mirsadComponents/Profile";
+import RecentMirsads from "../mirsadComponents/RecentMirsads";
 export default function Home(props) {
   return (
     <div>
@@ -862,6 +865,30 @@ export default function Home(props) {
           />
         ))}
       </section>
+
+      <section className='pt-12 pb-12'>
+        {props.profile.map((item, idx) => (
+          <Profile
+            greeting={item.greeting}
+            location={item.location}
+            level={item.level}
+            imageUrl={item.imageUrl}
+          />
+        ))}
+      </section>
+
+      <section className='pt-12 pb-12'>
+
+
+            <RecentMirsads 
+            
+            
+            
+            
+            />
+
+
+      </section>
     </div>
   );
 }
@@ -892,6 +919,7 @@ export async function getServerSideProps(context) {
       IlligalParking: response.data.IlligalParking,
       TypeOfInfringment: response.data.TypeOfInfringment,
       DescriptionBoxWhite: response.data.DescriptionBoxWhite,
+      profile: response.data.profile,
     }, // will be passed to the page component as props
   };
 }
