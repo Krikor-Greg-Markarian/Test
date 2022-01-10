@@ -3,14 +3,8 @@ import cn from "classnames";
 import Button2 from "./Button2";
 function RecentMirsads(props) {
   return (
-    <div
-      className={cn("bg-white rounded-xl container mx-auto w-5/12 shadow-xl")}
-    >
-      <img
-        className={cn("rounded-t-xl")}
-        src='https://cdn.pixabay.com/photo/2021/10/07/15/12/wine-6688901__480.jpg'
-        alt=''
-      />
+    <div className={cn("bg-white rounded-xl container mx-auto shadow-xl")}>
+      <img className={cn("rounded-t-xl")} src={props.imageUrl} alt='' />
 
       <div className={cn("p-4")}>
         {props.isPending ? (

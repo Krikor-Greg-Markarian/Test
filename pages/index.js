@@ -878,16 +878,21 @@ export default function Home(props) {
       </section>
 
       <section className='pt-12 pb-12'>
-        {props.recentMirsads.map((item, idx) => (
-          <RecentMirsads
-            title={item.title}
-            category={item.category}
-            date={item.date}
-            time={item.time}
-            buttonName={item.buttonName}
-            isPending={item.isPending}
-          />
-        ))}
+        <div className={cn("grid grid-cols-3 gap-2")}>
+          {props.recentMirsads.map((item, idx) => (
+            <div className={cn("col-span-1")}>
+              <RecentMirsads
+                imageUrl={item.imageUrl}
+                title={item.title}
+                category={item.category}
+                date={item.date}
+                time={item.time}
+                buttonName={item.buttonName}
+                isPending={item.isPending}
+              />
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

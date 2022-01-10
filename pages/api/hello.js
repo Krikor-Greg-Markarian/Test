@@ -182,6 +182,26 @@ export default function handler(req, res) {
 
     recentMirsads: [
       {
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2021/12/19/12/27/road-6881040__480.jpg",
+        title: "Long title of the case goes here",
+        category: "category",
+        date: "01/02/2021",
+        time: "04:51 pm",
+        isPending: true,
+      },
+      {
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2021/11/28/15/31/cathedral-6830531__340.jpg",
+        title: "Long title of the case goes here",
+        category: "category",
+        date: "01/02/2021",
+        time: "04:51 pm",
+        isPending: false,
+      },
+      {
+        imageUrl:
+          "https://cdn.pixabay.com/photo/2021/12/29/19/02/peter-6902548__340.jpg",
         title: "Long title of the case goes here",
         category: "category",
         date: "01/02/2021",
